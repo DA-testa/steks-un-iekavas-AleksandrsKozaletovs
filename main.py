@@ -1,7 +1,6 @@
 # python3
 
 from collections import namedtuple
-import numpy
 
 Bracket = namedtuple("Bracket", ["char", "position"])
 
