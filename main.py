@@ -23,10 +23,11 @@ def find_mismatch(text):
 def main():
     text = input()
     if text == "I":
-        i = input()
+        i = input()          
+        mismatch = find_mismatch(i)
     elif text == "F":
         print("In progress")               
-    mismatch = find_mismatch(i)
+    mismatch = find_mismatch(text)
     if not mismatch:
         print("Success")
     else:
