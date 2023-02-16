@@ -28,7 +28,7 @@ def main():
         mismatch = find_mismatch(i)
     elif text == "F":
         print("In progress") 
-    if text.isnumeric() == true:
+    if text.isnumeric() == True:
         return
     else:    
         mismatch = find_mismatch(text)
