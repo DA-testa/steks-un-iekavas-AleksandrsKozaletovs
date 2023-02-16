@@ -1,6 +1,7 @@
 # python3
 
 from collections import namedtuple
+import numpy
 
 Bracket = namedtuple("Bracket", ["char", "position"])
 
@@ -26,8 +27,11 @@ def main():
         i = input()          
         mismatch = find_mismatch(i)
     elif text == "F":
-        print("In progress")               
-    mismatch = find_mismatch(text)
+        print("In progress") 
+    if text.isnumeric() == true:
+        return
+    else:    
+        mismatch = find_mismatch(text)
     if not mismatch:
         print("Success")
     else:
