@@ -24,11 +24,11 @@ def find_mismatch(text):
       
 
 def main():
-    text = input()
-    if "I" in text:
+   text = input()
+   if text == "I":
         i = input()          
         mismatch = find_mismatch(i)
-    elif "F" in text:
+    elif text == "F":
         openFilename = input()
         file = open(openFilename,"r")
         result = find_mismatch(file)
