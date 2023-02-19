@@ -30,19 +30,20 @@ def find_mismatch(text):
 
 def main():
     i = input()  
-    text = input()      
-  
-    
-  if text == "I":  
-    mismatch = find_mismatch(i)
-  elif text == "F":
-    openFilename = input()
-    file = open(openFilename,"r")
-    result = find_mismatch(file)
-    print(result)
-  else:
-    mismatch = find_mismatch(text)
+    inputText = input()      
+    mismatch = find_mismatch(inputText)
     print(mismatch)
+    
+ # if text == "I":  
+ #   mismatch = find_mismatch(i)
+ # elif text == "F":
+ #   openFilename = input()
+ #   file = open(openFilename,"r")
+ #   result = find_mismatch(file)
+ #   print(result)
+ # else:
+ #   mismatch = find_mismatch(text)
+ #   print(mismatch)
 
 
 if __name__ == "__main__":
