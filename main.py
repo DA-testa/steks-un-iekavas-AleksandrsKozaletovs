@@ -19,6 +19,9 @@ def find_mismatch(text):
             if not opening_brackets_stack or not are_matching(opening_brackets_stack[-1].char,next):
                 return i+1           
             opening_brackets_stack.pop()
+        if next.isnumeric():
+            opening_brackets_stack.append(Bracket(next, i+1))
+            return i+1
     if not opening_brackets_stack: 
         return "Success" 
     else:
@@ -28,21 +31,18 @@ def find_mismatch(text):
 def main():
     i = input()  
     text = input()      
+  
+    
+  if text == "I":  
+    mismatch = find_mismatch(i)
+  elif text == "F":
+    openFilename = input()
+    file = open(openFilename,"r")
+    result = find_mismatch(file)
+    print(result)
+  else:
     mismatch = find_mismatch(text)
     print(mismatch)
-    
-  #  if text == "I":  
-  #      i = input()
-  #      mismatch = find_mismatch(i)
-  #  elif text == "F":
-  #      openFilename = input()
-  #      file = open(openFilename,"r")
-  #      result = find_mismatch(file)
-  #      print(result)
-  #  else:
-  #      mismatch = find_mismatch(text)
-  #      print(mismatch)
-         
 
 
 if __name__ == "__main__":
