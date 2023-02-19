@@ -30,8 +30,8 @@ def find_mismatch(text):
 
 def main():
     text = input()
-    if text == "I":
-        i = input()          
+    i = input()       
+    if text == "I":   
         mismatch = find_mismatch(i)
     elif text == "F":
         openFilename = input()
