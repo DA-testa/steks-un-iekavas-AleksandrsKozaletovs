@@ -19,9 +19,9 @@ def find_mismatch(text):
             if not opening_brackets_stack or not are_matching(opening_brackets_stack[-1].char,next):
                 return i+1           
             opening_brackets_stack.pop()
-        if next.isnumeric():
-            opening_brackets_stack.append(Bracket(next, i+1))
-            return i+1
+      #  if next.isnumeric():
+      #      opening_brackets_stack.append(Bracket(next, i+1))
+      #      return i+1
     if not opening_brackets_stack: 
         return "Success" 
     else:
