@@ -22,9 +22,10 @@ def find_mismatch(text):
         if next.isnumeric():
             opening_brackets_stack.append(Bracket(next, i+1))
             return i+1
-    if opening_brackets_stack:
-        return opening_brackets_stack[-1].position
-    return "Success"    
+    if i == len(text)-1 and len(opening_brackets_stack) == 0: 
+        return "Success" 
+    return opening_brackets_stack[-1].position
+      
 
 def main():
     text = input()
@@ -32,9 +33,13 @@ def main():
         i = input()          
         mismatch = find_mismatch(i)
     elif text == "F":
-        print("In progress")   
-    mismatch = find_mismatch(text)
-    print(mismatch)
+        openFilename = input()
+        file = open(openFilename,"r")
+        result = find_mismatch(file)
+        print(result)
+    else:
+        mismatch = find_mismatch(text)
+        print(mismatch)
          
 
 
