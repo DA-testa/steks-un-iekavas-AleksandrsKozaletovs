@@ -22,10 +22,10 @@ def find_mismatch(text):
         if next.isnumeric():
             opening_brackets_stack.append(Bracket(next, i+1))
             return i+1
-    if i == len(text)-1 and len(opening_brackets_stack) == 0: 
+    if not opening_brackets_stack: 
         return "Success" 
     else:
-        return opening_brackets_stack[-1].position
+        return opening_brackets_stack[0].position
       
 
 def main():
