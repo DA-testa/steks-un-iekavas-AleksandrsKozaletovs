@@ -26,18 +26,22 @@ def find_mismatch(text):
       
 
 def main():
-    text = input()    
-    if text == "I":  
-        i = input()
-        mismatch = find_mismatch(i)
-    elif text == "F":
-        openFilename = input()
-        file = open(openFilename,"r")
-        result = find_mismatch(file)
-        print(result)
-    else:
-        mismatch = find_mismatch(text)
-        print(mismatch)
+    i = input()  
+    text = input()      
+    mismatch = find_mismatch(text)
+    print(mismatch)
+    
+  #  if text == "I":  
+  #      i = input()
+  #      mismatch = find_mismatch(i)
+  #  elif text == "F":
+  #      openFilename = input()
+  #      file = open(openFilename,"r")
+  #      result = find_mismatch(file)
+  #      print(result)
+  #  else:
+  #      mismatch = find_mismatch(text)
+  #      print(mismatch)
          
 
 
